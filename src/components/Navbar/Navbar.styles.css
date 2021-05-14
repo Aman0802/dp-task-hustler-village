@@ -1,0 +1,29 @@
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+.nav__logo {
+  color: #2d3748;
+}
+.nav__link {
+  color: #999;
+  font-weight: 500;
+  margin-left: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+}

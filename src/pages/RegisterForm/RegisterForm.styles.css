@@ -1,0 +1,86 @@
+.register__container {
+  max-width: 30rem;
+  margin: 3rem auto;
+  padding: 2rem 4rem;
+  box-shadow: 0px 0px 10px #0000001a;
+  border-radius: 8px;
+}
+
+.register__heading {
+  color: #1a202c;
+  text-align: center;
+}
+
+.button__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.8rem 0 0.8rem 0;
+}
+
+.divider_label {
+  text-align: center;
+  font-size: 14px;
+}
+
+.register__form {
+  margin: 2rem 0;
+}
+
+.register__name {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.form__label {
+  font-size: 20px;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.form__input {
+  width: 100%;
+  color: #2d3748;
+  background-color: #edf2f7;
+  border: 0;
+  outline: 0;
+  box-shadow: 0px 1px 3px #00000029;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  font-size: 16px;
+}
+
+.password_labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.register__cta {
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 530px) {
+  .register__container {
+    margin: 3rem 1.2rem;
+    padding: 2rem;
+  }
+  .button__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .register__name {
+    flex-direction: column;
+  }
+  .form__label {
+    font-size: 16px !important;
+    margin-bottom: 0.5rem;
+  }
+  .form__input {
+    font-size: 14px !important;
+  }
+  .password_labels > span {
+    font-size: 14px;
+  }
+}

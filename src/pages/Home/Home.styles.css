@@ -1,0 +1,13 @@
+.homePage {
+  background-image: url("./Hero-vector.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 60%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .homePage {
+    background: none;
+  }
+}

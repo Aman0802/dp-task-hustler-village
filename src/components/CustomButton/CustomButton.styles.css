@@ -1,0 +1,48 @@
+.content__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn__title {
+  margin-right: 5px;
+}
+
+.btn__primary {
+  color: white;
+  background-color: #1b9cfc;
+}
+
+.btn__secondary {
+  color: white;
+  background-color: #2d3748;
+}
+
+.btn__secondaryInverted {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #2d3748;
+}
+
+.btn__google {
+  color: #2d3748;
+  background-color: #f7fafc;
+}
+
+.btn__github {
+  color: #ffffff;
+  background-color: #2d3748;
+}
+
+.btn__dribbble {
+  color: #ffffff;
+  background-color: #ed64a6;
+}
