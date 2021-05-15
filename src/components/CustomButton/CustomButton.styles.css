@@ -4,12 +4,19 @@
   align-items: center;
 }
 
+.btn__block {
+  display: block;
+  width: 100%;
+}
+
 .btn {
   border-radius: 5px;
   padding: 0.5rem 1.2rem;
   font-weight: 700;
   text-align: center;
   cursor: pointer;
+  outline: 0;
+  border: 0;
 }
 
 .btn__title {

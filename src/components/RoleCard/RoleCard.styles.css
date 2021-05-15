@@ -1,7 +1,7 @@
 .roleCard {
   box-shadow: 0px 1px 3px #00000029;
   border-radius: 5px;
-  max-width: 200px;
+  max-width: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;

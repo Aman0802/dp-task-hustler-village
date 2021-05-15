@@ -9,6 +9,15 @@ const RegisterForm: React.FC = () => {
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
 
+  const handleSubmit = (e: any): void => {
+    e.preventDefault();
+
+    console.log("First Name: ", firstName)
+    console.log("Last Name: ", lastName)
+    console.log("Email: ", email)
+    console.log("Password: ", password)
+  }
+
   return (
     <div className="register__container">
       <h2 className="register__heading">Register to HustersVillage</h2>
@@ -17,16 +26,19 @@ const RegisterForm: React.FC = () => {
           title="Google"
           inlineBlock
           type="google"
+          onChange={(e) => e.preventDefault()}
         />
         <CustomButton
           title="Github"
           inlineBlock
           type="github"
+          onChange={(e) => e.preventDefault()}
         />
         <CustomButton
           title="Dribble"
           inlineBlock
           type="dribbble"
+          onChange={(e) => e.preventDefault()}
         />
       </div>
       <div className="divider_label">or login with email</div>
@@ -40,6 +52,7 @@ const RegisterForm: React.FC = () => {
               type="text"
               placeholder="First Name"
               value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
 
@@ -50,6 +63,7 @@ const RegisterForm: React.FC = () => {
               type="text"
               placeholder="Last Name"
               value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
             />
           </div>
         </div>
@@ -60,16 +74,18 @@ const RegisterForm: React.FC = () => {
           type="text"
           placeholder="Email"
           value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <div className="password_labels">
           <h4 className="form__label">Password</h4>
-          <span className="blueText boldText">Forgot Password?</span>
+          <span style={{ fontSize: "16px" }} className="blueText boldText">Forgot Password?</span>
         </div>
         <input
           className="form__input"
           type="password"
           placeholder="Password"
           value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         <CustomButton
@@ -78,6 +94,7 @@ const RegisterForm: React.FC = () => {
           block
           icon={<ArrowForwardIcon fontSize="small" />}
           type="secondary"
+          onChange={(e) => handleSubmit(e)}
         />
 
         <div className="register__cta">

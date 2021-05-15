@@ -8,6 +8,7 @@ interface Props {
   icon?: any
   classes?: string
   type: string
+  onChange: React.MouseEventHandler<HTMLButtonElement>
 }
 
 const CustomButton: React.FC<Props> = ({
@@ -16,14 +17,16 @@ const CustomButton: React.FC<Props> = ({
   block,
   inlineBlock,
   icon,
-  type
+  type,
+  onChange
 }) => {
   return (
     <>
-      <div
+      <button
+        onClick={onChange}
         className={`
           btn btn__${type} 
-          ${block ? 'block' : inlineBlock ? 'inline-block' : ""}
+          ${block ? 'btn__block' : inlineBlock ? 'inline-block' : ""}
           ${classes}
         `}
       >
@@ -31,7 +34,7 @@ const CustomButton: React.FC<Props> = ({
           <span className={`${icon && "btn__title"}`}>{title}</span>
           {icon && icon}
         </div>
-      </div>
+      </button>
     </>
   )
 }
