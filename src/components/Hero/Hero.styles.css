@@ -11,6 +11,11 @@
   margin-bottom: 1.5rem;
 }
 
+.hero__details {
+  display: flex;
+  justify-content: center;
+}
+
 .hero__secText {
   display: inline-block;
   background-color: #edf2f7;
