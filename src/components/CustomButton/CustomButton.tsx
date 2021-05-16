@@ -28,7 +28,7 @@ const CustomButton: React.FC<Props> = ({
     'btn__google': type == 'google',
     'btn__dribbble': type == 'dribbble',
     'btn__github': type == 'github',
-    'block': block,
+    'btn__block': block,
     'inline-block': inlineBlock,
   })
   return (
