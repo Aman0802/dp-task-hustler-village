@@ -25,7 +25,7 @@ const Roles: React.FC = () => {
     }])
 
     const renderRolePaths = (): JSX.Element[] => {
-        return roles.map(role => (
+        return roles?.map(role => (
             <RoleCard imagePath={role.imagePath} title={role.title} />
         ))
     }

@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from "classnames";
 import "./CustomButton.styles.css"
 
 interface Props {
@@ -20,15 +21,21 @@ const CustomButton: React.FC<Props> = ({
   type,
   onChange
 }) => {
+  let btnClass = classnames('btn', {
+    'btn__primary': type == 'primary',
+    'btn__secondary': type == 'secondary',
+    'btn__secondaryInverted': type == 'secondaryInverted',
+    'btn__google': type == 'google',
+    'btn__dribbble': type == 'dribbble',
+    'btn__github': type == 'github',
+    'block': block,
+    'inline-block': inlineBlock,
+  })
   return (
     <>
       <button
         onClick={onChange}
-        className={`
-          btn btn__${type} 
-          ${block ? 'btn__block' : inlineBlock ? 'inline-block' : ""}
-          ${classes}
-        `}
+        className={`${btnClass} ${classes}`}
       >
         <div className="content__container">
           <span className={`${icon && "btn__title"}`}>{title}</span>
